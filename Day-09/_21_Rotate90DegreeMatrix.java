@@ -5,6 +5,7 @@ class Solution {
         int er = n - 1;
         int sc = 0;
         int ec = n - 1;
+        // Pehle Transpose
         for (int i = sr; i <= er; i++) {
             for (int j = i + 1; j <= ec; j++) {
                 int temp = matrix[i][j];
@@ -12,6 +13,7 @@ class Solution {
                 matrix[j][i] = temp;
             }
         }
+        // then fir Each Row Reverse
         for (int i = sr; i <= er; i++) {
             int left = sc;
             int right = ec;
